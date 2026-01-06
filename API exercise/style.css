@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  height: 2.5em;
+  border-radius: 4px;
+}
+
+button {
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1em 2em;
+}
+
+button:active {
+  background-color: lightskyblue;
+}
+
+button:hover {
+  cursor: pointer;
+}
