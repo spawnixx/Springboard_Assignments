@@ -1,0 +1,25 @@
+.Pokecard {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(161, 159, 159);
+  border-radius: 10px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+
+.pokeRow {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c9cfee;
+  margin: 0;
+  padding: 20px;
+}
+h2 {
+  color: rgb(221, 238, 68);
+}
