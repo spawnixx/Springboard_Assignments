@@ -1,0 +1,16 @@
+.spacecraft-builder {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.spacecraft-builder h1 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-lg);
+}

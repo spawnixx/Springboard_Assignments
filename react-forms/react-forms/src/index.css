@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Share+Tech+Mono&display=swap");
+
+/* ── CSS Variables ─────────────────────────────────── */
+:root {
+  --space-black: #04060f;
+  --deep-navy: #080d1f;
+  --panel-bg: rgba(8, 18, 42, 0.85);
+  --border-glow: #00e5ff;
+  --accent-cyan: #00e5ff;
+  --accent-amber: #ffb300;
+  --danger-red: #ff3d57;
+  --text-primary: #c8e6ff;
+  --text-dim: #5a7a99;
+  --glow-sm: 0 0 6px #00e5ff88;
+  --glow-md: 0 0 14px #00e5ffaa, 0 0 30px #00e5ff33;
+  --glow-lg: 0 0 20px #00e5ffcc, 0 0 50px #00e5ff44;
+}
+
+/* ── Reset & Base ───────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--space-black);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, #0a1a4a 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  color: var(--text-primary);
+  font-family: "Share Tech Mono", monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Starfield overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 30% 55%, #aad4ff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 55% 10%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 70% 40%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 85% 75%, #cce8ff 100%, transparent),
+    radial-gradient(1px 1px at 15% 80%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 42% 88%, #aad4ff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 92% 15%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 63% 65%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 5% 50%, #cce8ff 100%, transparent);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* ── Global Typography ──────────────────────────────── */
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */

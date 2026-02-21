@@ -1,0 +1,23 @@
+.item-action button {
+  background: transparent;
+  border: 1px solid var(--danger-red);
+  border-radius: 2px;
+  color: var(--danger-red);
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  padding: 0.4rem 0.9rem;
+  text-transform: uppercase;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    color 0.2s;
+  flex-shrink: 0;
+}
+
+.item-action button:hover {
+  background: var(--danger-red);
+  color: var(--space-black);
+  box-shadow: 0 0 12px #ff3d5788;
+}

@@ -1,0 +1,71 @@
+.inventory-display {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-glow);
+  border-radius: 4px;
+  padding: 1.8rem 2rem;
+  box-shadow:
+    var(--glow-md),
+    inset 0 0 40px rgba(0, 229, 255, 0.03);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corner decorations */
+.inventory-display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--accent-cyan);
+  border-left: 2px solid var(--accent-cyan);
+  filter: drop-shadow(var(--glow-sm));
+}
+
+.inventory-display::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--accent-cyan);
+  border-right: 2px solid var(--accent-cyan);
+  filter: drop-shadow(var(--glow-sm));
+}
+
+.inventory-display h2 {
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-sm);
+  margin-bottom: 1.2rem;
+}
+
+.inventory-display .inventory-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.inventory-display .inventory-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 229, 255, 0.03);
+  border: 1px solid #112236;
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 2px;
+  padding: 0.9rem 1.1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.inventory-display .inventory-row:hover {
+  border-color: var(--accent-cyan);
+  border-left-color: var(--accent-amber);
+  box-shadow: var(--glow-sm);
+}

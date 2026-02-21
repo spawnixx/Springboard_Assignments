@@ -1,0 +1,16 @@
+.item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.item-card h3 {
+  font-size: 0.9rem;
+  color: var(--accent-amber);
+  text-shadow: 0 0 8px #ffb30088;
+}
+
+.item-card p {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
