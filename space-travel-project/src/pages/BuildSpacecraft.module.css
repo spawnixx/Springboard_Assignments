@@ -1,0 +1,39 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card {
+  border: 2px dotted white;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.input {
+  margin-top: 5px;
+  padding: 8px;
+
+  background: black;
+  color: white;
+
+  border: 1px solid white;
+  outline: none;
+}

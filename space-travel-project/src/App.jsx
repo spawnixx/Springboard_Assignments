@@ -11,14 +11,27 @@ import Spacecraft from "./pages/Spacecraft";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 export default function App() {
+  const [selectedCraftId, setSelectedCraftId] = useState(null);
   const [spacecrafts, setSpacecrafts] = useState([]);
+  const [loadingSpacecrafts, SetLoadingSpacecrafts] = useState(true);
   useEffect(() => {
     async function getSpacecrafts() {
+      SetLoadingSpacecrafts(true);
       const response = await SpaceTravelApi.getSpacecrafts();
       setSpacecrafts(response.data);
+      SetLoadingSpacecrafts(false);
     }
     getSpacecrafts();
   }, []);
+  function moveSpacecraft(craftId, newPlanetId) {
+    setSpacecrafts((prev) =>
+      prev.map((craft) =>
+        craft.id === craftId
+          ? { ...craft, currentLocation: newPlanetId }
+          : craft,
+      ),
+    );
+  }
 
   function BuildNewSpacecraft(newSpacecraft) {
     setSpacecrafts([...spacecrafts, newSpacecraft]);
@@ -34,7 +47,17 @@ export default function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/pages/Planets" element={<Planets />} />
+            <Route
+              path="/pages/Planets"
+              element={
+                <Planets
+                  spacecrafts={spacecrafts}
+                  moveSpacecraft={moveSpacecraft}
+                  selectedCraftId={selectedCraftId}
+                  setSelectedCraftId={setSelectedCraftId}
+                />
+              }
+            />
             <Route
               path="/pages/Spacecrafts"
               element={

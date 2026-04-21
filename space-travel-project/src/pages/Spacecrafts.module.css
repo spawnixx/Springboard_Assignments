@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.craftCard {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  border: 2px dotted white;
+}

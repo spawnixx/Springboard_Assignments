@@ -1,4 +1,15 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-bottom: 2px dotted white;
+}
+.navcontent {
+  display: flex;
+  gap: 20px;
+  padding: 12px 20px;
+}
 .link {
   margin: 0 20px;
-  color: #000000;
+  color: white;
 }

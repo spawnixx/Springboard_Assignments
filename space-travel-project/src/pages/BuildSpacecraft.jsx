@@ -8,31 +8,37 @@ export default function BuildShip({ BuildNewSpacecraft }) {
       name: e.target.name.value,
       capacity: e.target.capacity.value,
       description: e.target.description.value,
+      currentLocation: 2,
     };
     BuildNewSpacecraft(newSpacecraft);
 
     navigate("/pages/Spacecrafts");
   };
   return (
-    <div>
-      <h1>Build Ship</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Ship Name:
-          <input type="text" name="name" />
-        </label>
-        <br />
-        <label>
-          Ship Capacity:
-          <input type="number" name="capacity" />
-        </label>
-        <br />
-        <label>
-          Ship Description:
-          <input type="text" name="description" />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>Build Ship</h1>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <label className={styles.label}>
+            Ship Name:
+            <input className={styles.input} type="text" name="name" />
+          </label>
+
+          <label className={styles.label}>
+            Ship Capacity:
+            <input className={styles.input} type="number" name="capacity" />
+          </label>
+
+          <label className={styles.label}>
+            Ship Description:
+            <input className={styles.input} type="text" name="description" />
+          </label>
+
+          <button className={styles.button} type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

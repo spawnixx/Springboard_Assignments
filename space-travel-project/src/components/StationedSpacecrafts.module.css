@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  width: fit-content;
+  padding-left: 0;
+  margin-top: 10px;
+}
+.item {
+  border: 1px solid white;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.selected {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
